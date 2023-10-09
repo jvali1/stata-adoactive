@@ -1,0 +1,13 @@
+v 3
+
+d adoactive: input a Dofile and return a list of all ados (i.e., not built-in Stata cmds) and their location used in that Dofile.
+d
+d Authors:
+d Jean-Victor Alipour. LMU Munich
+d
+d Requires: Stata version 16.0
+d
+d Distribution-Date: 20231018
+d
+f adoactive.ado
+f adoactive.sthlp

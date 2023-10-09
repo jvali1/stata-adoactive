@@ -1,0 +1,9 @@
+v 3
+d Jean-Victor Alipour (alipour@ifo.de)
+p grconst GRCONST- check whether a numeric variable is constant within groups
+
+* l word-to-show path-or-url [description]
+* t: Directories within site:
+* t path [description]
+* Packages:
+* p pkgname [description]
