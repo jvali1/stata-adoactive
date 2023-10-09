@@ -12,7 +12,7 @@
 {title: Description}
 
 {p 4 8}{cmd:adoactive} returns a list of user-written STATA commands (ados) called in the specified Dofile {it:{help filename}}.
-	It also returns the location of the ado files. The list of ados in saved in {it: r(adolist)}.
+	It also returns the location of the ado files. The list of ados is saved in {it: r(adolist)}.
 
 
 {synoptset 22 tabbed}{...}
