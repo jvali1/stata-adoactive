@@ -5,10 +5,10 @@ cap program drop adoactive
 program adoactive, rclass
 	version 17
 
-	// Define syntax and options for the program
+// Define syntax and options for the program
 	syntax anything(id = "filename" name = filename) [, Path(passthru)]
 	
-	// create file builtin_cmds.txt (list of built-in stata cmds)
+	// create file builtin_cmds.txt 
 	getbuilt
 	
 	// Check if file successfully created
@@ -78,7 +78,7 @@ program adoactive, rclass
 	// skip multiline comments enclosed by /* ... */
 	if ustrregexm(`"`line'"',"^[\s]*/\*")==1 { // checks if line starts with /*
 		file read `fh' line
-		while ustrregexm(`"`line'"',"\*/")==0 {  // next line until */ met
+		while ustrregexm(`"`line'"',"\*/")==0 & r(eof)==0 {  // next line until */ met
 			file read `fh' line
 		}	
 		file read `fh' line
@@ -118,7 +118,7 @@ program adoactive, rclass
 end
 
 
-/* program to create list of built-in stata commands*/
+
 cap program drop getbuilt 
 program define getbuilt, rclass
 	
